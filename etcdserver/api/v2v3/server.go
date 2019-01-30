@@ -19,12 +19,12 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/etcdserver/membership"
-	"github.com/coreos/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/etcdserver"
+	"github.com/TrustedKeep/etcd/etcdserver/api"
+	pb "github.com/TrustedKeep/etcd/etcdserver/etcdserverpb"
+	"github.com/TrustedKeep/etcd/etcdserver/membership"
+	"github.com/TrustedKeep/etcd/pkg/types"
 
 	"github.com/coreos/go-semver/semver"
 )

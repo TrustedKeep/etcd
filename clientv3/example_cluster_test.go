@@ -19,7 +19,7 @@ import (
 	"fmt"
 	"log"
 
-	"github.com/coreos/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/clientv3"
 )
 
 func ExampleCluster_memberList() {

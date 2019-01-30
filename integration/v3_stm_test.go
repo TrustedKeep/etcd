@@ -21,9 +21,9 @@ import (
 	"strconv"
 	"testing"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/clientv3/concurrency"
-	"github.com/coreos/etcd/pkg/testutil"
+	v3 "github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/clientv3/concurrency"
+	"github.com/TrustedKeep/etcd/pkg/testutil"
 )
 
 // TestSTMConflict tests that conflicts are retried.

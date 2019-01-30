@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/coreos/etcd/wal/walpb"
+	"github.com/TrustedKeep/etcd/wal/walpb"
 )
 
 var (

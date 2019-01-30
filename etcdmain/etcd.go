@@ -26,18 +26,18 @@ import (
 	"strings"
 	"time"
 
-	"github.com/coreos/etcd/discovery"
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/etcdhttp"
-	"github.com/coreos/etcd/pkg/cors"
-	"github.com/coreos/etcd/pkg/fileutil"
-	pkgioutil "github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/pkg/osutil"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/proxy/httpproxy"
-	"github.com/coreos/etcd/version"
+	"github.com/TrustedKeep/etcd/discovery"
+	"github.com/TrustedKeep/etcd/embed"
+	"github.com/TrustedKeep/etcd/etcdserver"
+	"github.com/TrustedKeep/etcd/etcdserver/api/etcdhttp"
+	"github.com/TrustedKeep/etcd/pkg/cors"
+	"github.com/TrustedKeep/etcd/pkg/fileutil"
+	pkgioutil "github.com/TrustedKeep/etcd/pkg/ioutil"
+	"github.com/TrustedKeep/etcd/pkg/osutil"
+	"github.com/TrustedKeep/etcd/pkg/transport"
+	"github.com/TrustedKeep/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/proxy/httpproxy"
+	"github.com/TrustedKeep/etcd/version"
 
 	"github.com/coreos/pkg/capnslog"
 	"google.golang.org/grpc"
@@ -45,7 +45,7 @@ import (
 
 type dirType string
 
-var plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "etcdmain")
+var plog = capnslog.NewPackageLogger("github.com/TrustedKeep/etcd", "etcdmain")
 
 var (
 	dirMember = dirType("member")

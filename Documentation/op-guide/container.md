@@ -17,14 +17,14 @@ export NODE1=192.168.1.21
 Trust the CoreOS [App Signing Key](https://coreos.com/security/app-signing-key/).
 
 ```
-sudo rkt trust --prefix quay.io/coreos/etcd
+sudo rkt trust --prefix quay.io/etcd-io/etcd
 # gpg key fingerprint is: 18AD 5014 C99E F7E3 BA5F  6CE9 50BD D3E0 FC8A 365E
 ```
 
 Run the `v3.2` version of etcd or specify another release version.
 
 ```
-sudo rkt run --net=default:IP=${NODE1} quay.io/coreos/etcd:v3.2 -- -name=node1 -advertise-client-urls=http://${NODE1}:2379 -initial-advertise-peer-urls=http://${NODE1}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE1}:2380 -initial-cluster=node1=http://${NODE1}:2380
+sudo rkt run --net=default:IP=${NODE1} quay.io/etcd-io/etcd:v3.2 -- -name=node1 -advertise-client-urls=http://${NODE1}:2379 -initial-advertise-peer-urls=http://${NODE1}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE1}:2380 -initial-cluster=node1=http://${NODE1}:2380
 ```
 
 List the cluster member.
@@ -45,13 +45,13 @@ export NODE3=172.16.28.23
 
 ```
 # node 1
-sudo rkt run --net=default:IP=${NODE1} quay.io/coreos/etcd:v3.2 -- -name=node1 -advertise-client-urls=http://${NODE1}:2379 -initial-advertise-peer-urls=http://${NODE1}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE1}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
+sudo rkt run --net=default:IP=${NODE1} quay.io/etcd-io/etcd:v3.2 -- -name=node1 -advertise-client-urls=http://${NODE1}:2379 -initial-advertise-peer-urls=http://${NODE1}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE1}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
 
 # node 2
-sudo rkt run --net=default:IP=${NODE2} quay.io/coreos/etcd:v3.2 -- -name=node2 -advertise-client-urls=http://${NODE2}:2379 -initial-advertise-peer-urls=http://${NODE2}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE2}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
+sudo rkt run --net=default:IP=${NODE2} quay.io/etcd-io/etcd:v3.2 -- -name=node2 -advertise-client-urls=http://${NODE2}:2379 -initial-advertise-peer-urls=http://${NODE2}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE2}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
 
 # node 3
-sudo rkt run --net=default:IP=${NODE3} quay.io/coreos/etcd:v3.2 -- -name=node3 -advertise-client-urls=http://${NODE3}:2379 -initial-advertise-peer-urls=http://${NODE3}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE3}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
+sudo rkt run --net=default:IP=${NODE3} quay.io/etcd-io/etcd:v3.2 -- -name=node3 -advertise-client-urls=http://${NODE3}:2379 -initial-advertise-peer-urls=http://${NODE3}:2380 -listen-client-urls=http://0.0.0.0:2379 -listen-peer-urls=http://${NODE3}:2380 -initial-cluster=node1=http://${NODE1}:2380,node2=http://${NODE2}:2380,node3=http://${NODE3}:2380
 ```
 
 Verify the cluster is healthy and can be reached.
@@ -86,7 +86,7 @@ export DATA_DIR="etcd-data"
 Run the latest version of etcd:
 
 ```
-REGISTRY=quay.io/coreos/etcd
+REGISTRY=quay.io/etcd-io/etcd
 # available from v3.2.5
 REGISTRY=gcr.io/etcd-development/etcd
 
@@ -111,7 +111,7 @@ etcdctl --endpoints=http://${NODE1}:2379 member list
 ### Running a 3 node etcd cluster
 
 ```
-REGISTRY=quay.io/coreos/etcd
+REGISTRY=quay.io/etcd-io/etcd
 # available from v3.2.5
 REGISTRY=gcr.io/etcd-development/etcd
 
@@ -189,7 +189,7 @@ To provision a 3 node etcd cluster on bare-metal, the examples in the [baremetal
 The etcd release container does not include default root certificates. To use HTTPS with certificates trusted by a root authority (e.g., for discovery), mount a certificate directory into the etcd container:
 
 ```
-REGISTRY=quay.io/coreos/etcd
+REGISTRY=quay.io/etcd-io/etcd
 # available from v3.2.5
 REGISTRY=docker://gcr.io/etcd-development/etcd
 
@@ -204,7 +204,7 @@ rkt run \
 ```
 
 ```
-REGISTRY=quay.io/coreos/etcd
+REGISTRY=quay.io/etcd-io/etcd
 # available from v3.2.5
 REGISTRY=gcr.io/etcd-development/etcd
 

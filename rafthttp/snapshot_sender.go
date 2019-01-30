@@ -22,11 +22,11 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coreos/etcd/pkg/httputil"
-	pioutil "github.com/coreos/etcd/pkg/ioutil"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft"
-	"github.com/coreos/etcd/snap"
+	"github.com/TrustedKeep/etcd/pkg/httputil"
+	pioutil "github.com/TrustedKeep/etcd/pkg/ioutil"
+	"github.com/TrustedKeep/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/raft"
+	"github.com/TrustedKeep/etcd/snap"
 )
 
 var (

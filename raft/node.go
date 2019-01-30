@@ -18,7 +18,7 @@ import (
 	"context"
 	"errors"
 
-	pb "github.com/coreos/etcd/raft/raftpb"
+	pb "github.com/TrustedKeep/etcd/raft/raftpb"
 )
 
 type SnapshotStatus int

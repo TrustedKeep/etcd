@@ -27,7 +27,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/coreos/etcd/pkg/pathutil"
+	"github.com/TrustedKeep/etcd/pkg/pathutil"
 	"github.com/ugorji/go/codec"
 )
 

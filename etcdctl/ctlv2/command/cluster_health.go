@@ -24,7 +24,7 @@ import (
 	"os/signal"
 	"time"
 
-	"github.com/coreos/etcd/client"
+	"github.com/TrustedKeep/etcd/client"
 
 	"github.com/urfave/cli"
 )

@@ -17,9 +17,9 @@ package recipe
 import (
 	"context"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/clientv3/concurrency"
-	"github.com/coreos/etcd/mvcc/mvccpb"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/clientv3/concurrency"
+	"github.com/TrustedKeep/etcd/mvcc/mvccpb"
 )
 
 // DoubleBarrier blocks processes on Enter until an expected count enters, then

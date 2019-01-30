@@ -18,10 +18,10 @@ import (
 	"context"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc"
-	"github.com/coreos/etcd/proxy/grpcproxy/adapter"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/etcdserver"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3rpc"
+	"github.com/TrustedKeep/etcd/proxy/grpcproxy/adapter"
 )
 
 // New creates a clientv3 client that wraps an in-process EtcdServer. Instead

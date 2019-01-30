@@ -18,7 +18,7 @@ import (
 	"context"
 	"time"
 
-	v3 "github.com/coreos/etcd/clientv3"
+	v3 "github.com/TrustedKeep/etcd/clientv3"
 )
 
 const defaultSessionTTL = 60

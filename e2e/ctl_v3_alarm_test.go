@@ -21,7 +21,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/clientv3"
 )
 
 func TestCtlV3Alarm(t *testing.T) {

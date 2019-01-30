@@ -21,8 +21,8 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/TrustedKeep/etcd/pkg/testutil"
+	"github.com/TrustedKeep/etcd/raft/raftpb"
 )
 
 // TestNodeStep ensures that node.Step sends msgProp to propc chan

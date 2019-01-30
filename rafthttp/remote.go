@@ -15,8 +15,8 @@
 package rafthttp
 
 import (
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
+	"github.com/TrustedKeep/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/raft/raftpb"
 )
 
 type remote struct {

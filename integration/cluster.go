@@ -32,24 +32,24 @@ import (
 	"testing"
 	"time"
 
-	"github.com/coreos/etcd/client"
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/embed"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/etcdhttp"
-	"github.com/coreos/etcd/etcdserver/api/v2http"
-	"github.com/coreos/etcd/etcdserver/api/v3client"
-	"github.com/coreos/etcd/etcdserver/api/v3election"
-	epb "github.com/coreos/etcd/etcdserver/api/v3election/v3electionpb"
-	"github.com/coreos/etcd/etcdserver/api/v3lock"
-	lockpb "github.com/coreos/etcd/etcdserver/api/v3lock/v3lockpb"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/testutil"
-	"github.com/coreos/etcd/pkg/tlsutil"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/rafthttp"
+	"github.com/TrustedKeep/etcd/client"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/embed"
+	"github.com/TrustedKeep/etcd/etcdserver"
+	"github.com/TrustedKeep/etcd/etcdserver/api/etcdhttp"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v2http"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3client"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3election"
+	epb "github.com/TrustedKeep/etcd/etcdserver/api/v3election/v3electionpb"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3lock"
+	lockpb "github.com/TrustedKeep/etcd/etcdserver/api/v3lock/v3lockpb"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3rpc"
+	pb "github.com/TrustedKeep/etcd/etcdserver/etcdserverpb"
+	"github.com/TrustedKeep/etcd/pkg/testutil"
+	"github.com/TrustedKeep/etcd/pkg/tlsutil"
+	"github.com/TrustedKeep/etcd/pkg/transport"
+	"github.com/TrustedKeep/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/rafthttp"
 
 	"github.com/coreos/pkg/capnslog"
 	"github.com/soheilhy/cmux"
@@ -91,7 +91,7 @@ var (
 		ClientCertAuth: true,
 	}
 
-	plog = capnslog.NewPackageLogger("github.com/coreos/etcd", "integration")
+	plog = capnslog.NewPackageLogger("github.com/TrustedKeep/etcd", "integration")
 )
 
 type ClusterConfig struct {

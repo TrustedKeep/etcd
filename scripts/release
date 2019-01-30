@@ -56,7 +56,7 @@ main() {
   if [ ! -d "${reldir}/etcd" ]; then
     mkdir -p "${reldir}"
     cd "${reldir}"
-    git clone git@github.com:coreos/etcd.git --branch "${BRANCH}"
+    git clone git@github.com:etcd-io/etcd.git --branch "${BRANCH}"
   fi
   cd "${reldir}/etcd"
 
@@ -106,7 +106,7 @@ main() {
 
     # Push the version change if it's not already been pushed.
     if [ $(git rev-list --count "origin/${BRANCH}..${BRANCH}") -gt 0 ]; then
-      read -p "Push version bump up to ${VERSION} to github.com/coreos/etcd [y/N]? " confirm
+      read -p "Push version bump up to ${VERSION} to github.com/TrustedKeep/etcd [y/N]? " confirm
       [[ "${confirm,,}" == "y" ]] || exit 1
       git push
     fi
@@ -168,18 +168,18 @@ main() {
     done
     gcloud docker -- login -u _json_key -p "$(cat /etc/gcp-key-etcd-development.json)" https://gcr.io
 
-    docker push quay.io/coreos/etcd:${RELEASE_VERSION}
+    docker push quay.io/etcd-io/etcd:${RELEASE_VERSION}
     gcloud docker -- push gcr.io/etcd-development/etcd:${RELEASE_VERSION}
     if [ "${MINOR_VERSION}" != "3.1" ]; then
       for TARGET_ARCH in "-arm64" "-ppc64le"; do
-        docker push quay.io/coreos/etcd:${RELEASE_VERSION}${TARGET_ARCH}
+        docker push quay.io/etcd-io/etcd:${RELEASE_VERSION}${TARGET_ARCH}
         gcloud docker -- push gcr.io/etcd-development/etcd:${RELEASE_VERSION}${TARGET_ARCH}
       done
     fi
     gsutil -m acl ch -u allUsers:R -r gs://artifacts.etcd-development.appspot.com
 
-    docker tag quay.io/coreos/etcd:${RELEASE_VERSION} quay.io/coreos/etcd:v${MINOR_VERSION}
-    docker push quay.io/coreos/etcd:v${MINOR_VERSION}
+    docker tag quay.io/etcd-io/etcd:${RELEASE_VERSION} quay.io/etcd-io/etcd:v${MINOR_VERSION}
+    docker push quay.io/etcd-io/etcd:v${MINOR_VERSION}
     
     gcloud docker -- tag gcr.io/etcd-development/etcd:${RELEASE_VERSION} gcr.io/etcd-development/etcd:v${MINOR_VERSION}
     gcloud docker -- push gcr.io/etcd-development/etcd:v${MINOR_VERSION}
@@ -202,7 +202,7 @@ main() {
     git add version/version.go
     git commit -m "version: bump up to ${VERSION}+git"
     git diff --staged
-    read -p "Push version bump up to ${VERSION}+git to github.com/coreos/etcd [y/N]? " confirm
+    read -p "Push version bump up to ${VERSION}+git to github.com/TrustedKeep/etcd [y/N]? " confirm
     [[ "${confirm,,}" == "y" ]] || exit 1
     git push
   fi

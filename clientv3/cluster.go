@@ -17,8 +17,8 @@ package clientv3
 import (
 	"context"
 
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/pkg/types"
+	pb "github.com/TrustedKeep/etcd/etcdserver/etcdserverpb"
+	"github.com/TrustedKeep/etcd/pkg/types"
 
 	"google.golang.org/grpc"
 )

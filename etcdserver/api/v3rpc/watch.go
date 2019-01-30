@@ -20,12 +20,12 @@ import (
 	"sync"
 	"time"
 
-	"github.com/coreos/etcd/auth"
-	"github.com/coreos/etcd/etcdserver"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	"github.com/coreos/etcd/mvcc"
-	"github.com/coreos/etcd/mvcc/mvccpb"
+	"github.com/TrustedKeep/etcd/auth"
+	"github.com/TrustedKeep/etcd/etcdserver"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3rpc/rpctypes"
+	pb "github.com/TrustedKeep/etcd/etcdserver/etcdserverpb"
+	"github.com/TrustedKeep/etcd/mvcc"
+	"github.com/TrustedKeep/etcd/mvcc/mvccpb"
 )
 
 type watchServer struct {

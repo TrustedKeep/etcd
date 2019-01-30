@@ -18,7 +18,7 @@ import (
 	"fmt"
 	"os/exec"
 
-	"github.com/coreos/etcd/functional/rpcpb"
+	"github.com/TrustedKeep/etcd/functional/rpcpb"
 )
 
 type caseExternal struct {

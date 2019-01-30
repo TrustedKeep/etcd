@@ -27,12 +27,12 @@ import (
 
 	"golang.org/x/time/rate"
 
-	"github.com/coreos/etcd/etcdserver/stats"
-	"github.com/coreos/etcd/pkg/httputil"
-	"github.com/coreos/etcd/pkg/transport"
-	"github.com/coreos/etcd/pkg/types"
-	"github.com/coreos/etcd/raft/raftpb"
-	"github.com/coreos/etcd/version"
+	"github.com/TrustedKeep/etcd/etcdserver/stats"
+	"github.com/TrustedKeep/etcd/pkg/httputil"
+	"github.com/TrustedKeep/etcd/pkg/transport"
+	"github.com/TrustedKeep/etcd/pkg/types"
+	"github.com/TrustedKeep/etcd/raft/raftpb"
+	"github.com/TrustedKeep/etcd/version"
 	"github.com/coreos/go-semver/semver"
 )
 

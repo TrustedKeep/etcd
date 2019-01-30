@@ -19,9 +19,9 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/etcdserver/api/etcdhttp"
-	"github.com/coreos/etcd/etcdserver/api/v3rpc/rpctypes"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/etcdserver/api/etcdhttp"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3rpc/rpctypes"
 )
 
 // HandleHealth registers health handler on '/health'.

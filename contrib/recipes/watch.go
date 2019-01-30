@@ -17,8 +17,8 @@ package recipe
 import (
 	"context"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/mvcc/mvccpb"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/mvcc/mvccpb"
 )
 
 // WaitEvents waits on a key until it observes the given events and returns the final one.

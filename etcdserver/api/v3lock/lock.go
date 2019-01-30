@@ -17,9 +17,9 @@ package v3lock
 import (
 	"context"
 
-	"github.com/coreos/etcd/clientv3"
-	"github.com/coreos/etcd/clientv3/concurrency"
-	"github.com/coreos/etcd/etcdserver/api/v3lock/v3lockpb"
+	"github.com/TrustedKeep/etcd/clientv3"
+	"github.com/TrustedKeep/etcd/clientv3/concurrency"
+	"github.com/TrustedKeep/etcd/etcdserver/api/v3lock/v3lockpb"
 )
 
 type lockServer struct {

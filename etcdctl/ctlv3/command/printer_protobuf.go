@@ -18,9 +18,9 @@ import (
 	"fmt"
 	"os"
 
-	v3 "github.com/coreos/etcd/clientv3"
-	pb "github.com/coreos/etcd/etcdserver/etcdserverpb"
-	mvccpb "github.com/coreos/etcd/mvcc/mvccpb"
+	v3 "github.com/TrustedKeep/etcd/clientv3"
+	pb "github.com/TrustedKeep/etcd/etcdserver/etcdserverpb"
+	mvccpb "github.com/TrustedKeep/etcd/mvcc/mvccpb"
 )
 
 type pbPrinter struct{ printer }

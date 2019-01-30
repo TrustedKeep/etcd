@@ -23,7 +23,7 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/coreos/etcd/pkg/fileutil"
+	"github.com/TrustedKeep/etcd/pkg/fileutil"
 )
 
 // TODO: support separate WAL directory
